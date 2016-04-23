@@ -1,4 +1,4 @@
-// app/controllers/ vacina.js
+// app/controllers/vacina.js
 
 module.exports = function (app) {
 
