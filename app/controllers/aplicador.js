@@ -1,4 +1,4 @@
-// app/controllers/ aplicador.js
+// app/controllers/aplicador.js
 
 module.exports = function (app) {
 
