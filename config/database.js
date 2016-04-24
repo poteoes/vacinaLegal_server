@@ -10,18 +10,18 @@ module.exports = function(uri){
         console.log('Mongose! Conectado em ' + uri);
     });
     
-    mongoose.connect.on('disconnected', function() {
+    mongoose.connection.on('disconnected', function() {
         console.log('Mongose! Desconectado de ' + uri);
     });
     
-    mongoose.connect.on('error', function (erro) {
+    mongoose.connection.on('error', function (erro) {
         console.log('Mongose! Erro na conexão: ' + erro);
     });
     
     // close connect
     
     process.on('SIGINT', function () {
-        mongoose.connect.close(function () {
+        mongoose.connection.close(function () {
             console.log('Mongose! Desconectado pelo termino da aplicação');
             
             process.exit(0);
