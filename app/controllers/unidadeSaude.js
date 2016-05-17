@@ -1,5 +1,7 @@
 // app/controllers/unidadeSaude.js
 
+var sanitize = require('mongo-sanitize');
+
 module.exports = function (app) {
 
     var controller = {};
@@ -35,7 +37,7 @@ module.exports = function (app) {
     };
 
     controller.removeUnidadeSaude = function(req, res) {
-        var _id = req.params.id;
+        var _id = sanitize(req.params.id);
         UnidadeSaude.remove({"_id" : _id}).exec()
         .then(
             function () {
@@ -50,8 +52,12 @@ module.exports = function (app) {
 
     controller.salvaUnidadeSaude = function(req, res) {
         var _id = req.body._id;
+        var dados = {
+          "cnpj" :  req.body.cnpj,
+          "name" : req.body.name
+        };
         if(_id) {
-            UnidadeSaude.findByIdAndUpdate(_id, req.body).exec()
+            UnidadeSaude.findByIdAndUpdate(_id, dados).exec()
             .then(
                 function (unidadeSaude) {
                     res.json(unidadeSaude);
@@ -62,7 +68,7 @@ module.exports = function (app) {
                 }
             );
         } else {
-            UnidadeSaude.create(req.body)
+            UnidadeSaude.create(dados)
             .then(
                 function (unidadeSaude) {
                     res.status(201).json(unidadeSaude);
