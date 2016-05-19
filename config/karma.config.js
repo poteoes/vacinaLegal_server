@@ -17,9 +17,6 @@ module.exports = function(config) {
     files: [
         '../public/vendor/angular/angular.js',
         '../public/js/main.js',
-        '../public/js/controllers/**/*.js',
-        '../public/js/services/**/*.js',
-        '../test/spec/**/*Spec.js'
     ],
 
 
