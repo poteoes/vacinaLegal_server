@@ -25,7 +25,7 @@ module.exports = function () {
     app.use(helmet.xframe());
     app.use(helmet.xssFilter());
     app.use(helmet.nosniff());
-    app.desable('x-powered-by');
+    //app.desable('x-powered-by');
     
     load('models', {cwd: 'app'})
         .then('controllers')
