@@ -28,7 +28,6 @@ node_modules
 public/vendor
 .tmp/
 dist
-test/
 .vscode
 
 # Optional npm cache directory

@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Wed May 18 2016 00:26:02 GMT-0300 (Hora oficial do Brasil)
+// Generated on Wed May 18 2016 22:52:32 GMT-0300 (Hora oficial do Brasil)
 
 module.exports = function(config) {
   config.set({
@@ -15,6 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+        '../public/vendor/angular/angular.js',
+        '../public/js/main.js',
+        '../public/js/controllers/**/*.js',
+        '../public/js/services/**/*.js',
+        '../test/spec/**/*Spec.js'
     ],
 
 
@@ -45,7 +50,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_INFO, config.LOG_ERROR
 
 
     // enable / disable watching file and executing tests whenever any file changes
@@ -54,7 +59,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Firefox', 'Chrome'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
