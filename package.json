@@ -2,6 +2,9 @@
   "name": "vacinalegal",
   "version": "0.0.1",
   "description": "Plataforma de vacinação desenvolvida pelos os alunos da FG",
+  "engines": {
+    "node": "4.4.4"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
