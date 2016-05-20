@@ -2,6 +2,7 @@
 
 var http = require('http');
 var app = require('./config/express')();
+require('./config/passport')();
 require('./config/database.js')(process.env.MONGOLAB_URI ||
     'mongodb://test:t3st@ds025772.mlab.com:25772/vacinalegal_db');
 

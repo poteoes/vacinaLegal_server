@@ -3,6 +3,9 @@ var helmet = require('helmet');
 var express = require('express');
 var load = require('express-load');
 var bodyParse = require('body-parser');
+var cokieParser = require('cokie-parser');
+var session = require('express-session');
+var passport = require('passport');
 
 module.exports = function () {
     var app = express();
@@ -19,6 +22,18 @@ module.exports = function () {
     app.use(bodyParse.urlencoded({extended: true}));
     app.use(bodyParse.json());
     app.use(require('method-override')());
+    
+    //OAuth2.0
+    app.use(cokieParser());
+    app.use(session(
+        {
+            secret: 'home avestrus',
+            resave: true,
+            saveUninitialized: true
+        }
+    ));
+    app.use(passport.initialize());
+    app.use(passport.session());
     
     app.use(helmet());
     
