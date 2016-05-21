@@ -3,7 +3,7 @@ var helmet = require('helmet');
 var express = require('express');
 var load = require('express-load');
 var bodyParse = require('body-parser');
-var cokieParser = require('cokie-parser');
+var cokieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
 
@@ -27,7 +27,7 @@ module.exports = function () {
     app.use(cokieParser());
     app.use(session(
         {
-            secret: 'home avestrus',
+            secret: 'home batata',
             resave: true,
             saveUninitialized: true
         }
