@@ -13,4 +13,13 @@ module.exports = function (app) {
         successRedirect: '/',
         failureRedirect: '/auth/google'
     }));
+    
+    app.get('auth/facebook',
+       passport.authenticate('facebook'));
+       
+    app.get('/facebook/oauth/calback',
+        passport.authenticate('facebook', { failureRedirect: '/login'}),
+        function (req, res) {
+            res.redirect('/');
+        });
 };
