@@ -8,7 +8,7 @@ module.exports = function () {
             type: String,
             required: true
         },
-        crm: {
+        coren: {
             type: String,
             required: true,
             index: {
