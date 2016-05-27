@@ -1,0 +1,76 @@
+	/* RESET */
+	*{margin: 0; padding: 0; font-size: 100%; border: none; outline: none; font-weight: 700; box-sizing: border-box; font-family: 'Lato', sans-serif;}
+		body {background-color: #eee;}
+		img {max-width: 100%;}
+
+	/* CABEÇALHO */
+	.img-responsive{margin-bottom: 5px; margin-top: 5px;}
+	.cabecalho{width: 100%; float: left; padding: 2% 3%; margin-top: -30px; background-color: #ddd;}
+	
+	
+	/* MENU */
+	header{width: 100%; height: 395px; background-color: #ddd; float: right; margin-top: 10px; border-radius: 12px;}
+
+	.containe{width: 280px; height: 80px; float: right; margin-top: -75px; border-radius: 12px; background-color: #ddd;}
+	img.icon{display: block; float: left; margin-right: 10px; margin-top: -15px; background-color: rgba(255,255,255,0.15); width: 70px; padding: 12px; border-radius:50%;}
+	p.texto{font-size: 1em; color: #000; margin-top: 10px;}
+	a{text-decoration: none;}
+	a:hover {text-decoration: underline;}
+	div.containe:hover{background-color: #2ECC71;}
+
+
+	/* LOGIN */
+
+
+	.container{ width: 300px; height: 100px; text-align: center; border-radius: 4px; margin-left: 500px; margin-top: 150px;}
+	a{color: #000;}
+	/*.container img{ width: 130px; height: 130px; margin-top: -50px; margin-bottom: 30px; margin-left: 10px; cursor: pointer;}
+	
+	.opcao{ text-align: center; margin-top: -2%;}
+
+	input[type="text"],input[type="password"],input[type="email"]{ height: 45px; width: 300px; font-size: 18px; border: none; margin-bottom: 20px; 
+		border-radius: 4px; background-color: #fff; padding-left: 40px; margin-top: -2px;}
+	select{ height: 45px; width: 300px; font-size: 18px; border: none; margin-bottom: 20px; 
+		border-radius: 4px; background-color: #fff; padding-left: 40px; margin-top: -2px;}
+	.form-input::before{ content: "\f007"; position: absolute; font-family: "FontAwesome"; padding-left: 5px; color: #2ECC71;
+		padding-top: 1px; font-size: 35px;}
+	.form-input1::before{ content: "\f023"; position: absolute; font-family: "FontAwesome"; padding-left: 5px; color: #2ECC71;
+		padding-top: 1px; font-size: 35px;}
+	.form-input2::before{ content: "\f003"; position: absolute; font-family: "FontAwesome"; padding-left: 5px; color: #2ECC71;
+		padding-top: 1px; font-size: 35px;}
+		
+	.btn-login{ padding: 15px 30px; cursor: pointer; color: #fff; border-radius: 4px; border:none; background-color: #2ECC71;
+		border-bottom: 4px solid #27AE60; margin-bottom: 20px;}
+	a{text-decoration: none;}
+	a:hover {text-decoration: underline;}
+	a{ color: #fff; cursor: pointer;}
+	h3{color: #fff; text-align: center;}
+	.reset{color: red;}
+
+	.btn-acesso{ padding: 5px 20px; cursor: pointer; border-radius: 4px; border:none; background-color: #2ECC71;
+		border-bottom: 4px solid #27AE60; margin-bottom: 20px; margin-top: 2px; color: #fff;}
+	.texto{ color: #fff;}
+	.solicitar{color: red;}*/
+
+	.calendario{width: 900px; height: 500px; margin-top: -20px; cursor: pointer;}
+ 
+	.item{width: 870px; height: 395; margin-left: 17%;}
+	/* REDE SOCIAL */
+	
+
+	/* RODAPÉ */
+
+	.rodape {width: 100%; float: left;margin-top: 20px; padding: 1% 1.5%; text-align: center; background-color: #ddd;}
+	.iconeD{display: block; float: left; margin-left: 5px; margin-top: 0px; background-color: rgba(255,255,255,0.15); width: 50px; padding: 10px; border-radius:50%;}
+	.containeD{width: 170px; height: 50px; float: left; margin-left: 20px; margin-top: -14px; border-radius: 12px; background-color: #ddd;}
+	.textoD{font-size: 1em; color: #000; margin-top: 15px; margin-right: 50px;}
+	.containeD:hover{background-color: #eee;}
+	.iconeC{display: block; float: left; margin-right: 5px; background-color: rgba(255,255,255,0.15); width: 50px; padding: 10px; border-radius:50%;}
+	.containeC{width: 280px; height: 50px; float: right; margin-right: 20px; margin-top: -14px; border-radius: 12px; background-color: #ddd;}
+	.textoC{font-size: 1em; color: #000; margin-top: 15px; margin-left: 50px;}
+	.containeC:hover{background-color: #eee;}
+	.copyright {margin-top: 5px; color: #000;}
+
+
+
+
