@@ -4,8 +4,8 @@
 		img {max-width: 100%;}
 
 	/* CABEÇALHO */
-	.img-responsive{margin-bottom: 5px; margin-top: 5px;}
-	.cabecalho{width: 100%; float: left; padding: 2% 3%; margin-top: -30px; background-color: #ddd;}
+	.img-responsive{margin-bottom: 5px; margin-top: 5px; margin-left: 10px;}
+	.cabecalho{width: 100%; float: left; padding: 0.5% 1%; margin-top: -10px; background-color: #ddd;}
 	
 	
 	/* MENU */
@@ -66,10 +66,11 @@
 	.textoD{font-size: 1em; color: #000; margin-top: 15px; margin-right: 50px;}
 	.containeD:hover{background-color: #eee;}
 	.iconeC{display: block; float: left; margin-right: 5px; background-color: rgba(255,255,255,0.15); width: 50px; padding: 10px; border-radius:50%;}
-	.containeC{width: 280px; height: 50px; float: right; margin-right: 20px; margin-top: -14px; border-radius: 12px; background-color: #ddd;}
+	.containeC{width: 280px; height: 50px; float: left; margin-right: 20px; margin-top: -14px; border-radius: 12px; background-color: #ddd;}
 	.textoC{font-size: 1em; color: #000; margin-top: 15px; margin-left: 50px;}
 	.containeC:hover{background-color: #eee;}
 	.copyright {margin-top: 5px; color: #000;}
+	p{text-align: center;}
 
 
 
