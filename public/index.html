@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Evandro Costa">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-signin-client_id" content="240625683385-jjep8khk35kb7801aqjuka3228me9a61.apps.googleusercontent.com">
 	<title>VacinaLegal</title>
 	<link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
@@ -16,22 +17,32 @@
 			
 	<a href="#home"><img src="img\logo.png" class="img-responsive" alt="Imagem responsiva"></a>
 
-<div class="cabecalho">								
-	<a href="#unidade"><div class="containe" id="unidade">
-		<br><img class="icon" src="img/unidade.png">
-		<p class="texto">Unidade de Saúde</p>
-	</div></a>
+<nav role="navigation" class="navbar navbar=default">
+	<div class="navbar-header">
+		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+			<span class="sr-only"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	<div class="cabecalho">								
+		<a href="#unidade"><div class="containe" id="unidade">
+			<br><img class="icon" src="img/unidade.png">
+			<p class="texto">Unidade de Saúde</p>
+		</div></a>
 
-	<a href="#profissional"><div class="containe" id="profissional">
-		<br><img class="icon" src="img/profissionalB.png">
-		<p class="texto">Profissional de Saúde</p>
-	</div></a>
+		<a href="#profissional"><div class="containe" id="profissional">
+			<br><img class="icon" src="img/profissionalB.png">
+			<p class="texto">Profissional de Saúde</p>
+		</div></a>
 
-	<a href="#cidadao"><div class="containe" id="cidadao">
-		<br><img class="icon" src="img/cidadaoB.png">
-		<p class="texto">Cidadão</p>
-	</div></a>
-</div>
+		<a href="#cidadao"><div class="containe" id="cidadao">
+			<br><img class="icon" src="img/cidadaoB.png">
+			<p class="texto">Cidadão</p>
+		</div></a>
+	</div>
+</nav>
 
 
 	<header>
@@ -45,6 +56,7 @@
 	<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="vendor/angular/angular.min.js"></script>
 	<script src="vendor/angular-route/angular-route.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 	<!-- MAIN -->
 	<script src="js/main.js"></script>
@@ -71,11 +83,11 @@
 <footer class="rodape">
 			<div class="roda">
 				<p class="copyright">
-				<a href="#"><div class="containeD"><img class="iconeD" src="img/duvida.png"><p class="textoD">Dúvidas</p></div></a>
+				<a href="#duvida"><div class="containeD"><img class="iconeD" src="img/duvida.png"><p class="textoD">Dúvidas</p></div></a>
 
-				<a href="#"><div class="containeC"><img class="iconeC" src="img/calendario.png"><p class="textoC">Calendario de Vacinação</p></div></a>
+				<a href="http://lproweb.procempa.com.br/pmpa/prefpoa/cgvs/usu_doc/0804_calendario_vacinal_agenda.pdf"><div class="containeC"><img class="iconeC" src="img/calendario.png"><p class="textoC">Calendario de Vacinação</p></div></a>
 			</div>
 </footer>
-			<br><p>Copyright © Vacina Legal 2016. Todos direitos reservados.
+			<br><p class="certificado">Copyright © Vacina Legal 2016. Todos direitos reservados.
 			</p>
 </html>

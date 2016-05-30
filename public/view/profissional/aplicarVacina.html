@@ -61,7 +61,10 @@
 </section>
 <nav class="menu">
 		<a class="btn-close"><i class="fa fa-times"></i></a>
-		<li><a>DOCE ÚNICA</a></li>
+		<li><a>Informe o numero do lote</a></li>
+    <input class="lote" placeholder="  Nº DO LOTE"></input>
+    <button class="btn-aplicar" onclick="aplicar('bcg')">APLICAR</button>
+
 </nav>
 <script>
 	$(".btn-menu").click(function(){
@@ -70,4 +73,15 @@
 	$(".btn-close").click(function(){
 		$(".menu").hide();
 	});
+  $(".btn-aplicar").click(function(){
+    $(".menu").hide();
+  });
+</script>
+<script>
+function aplicar(identificador){
+  var input = document.getElementById('lote').value;
+  if(input != ''){
+    document.getElementById(identificador).style.backgroundColor = '#2ECC71'; 
+  }
+}
 </script>
