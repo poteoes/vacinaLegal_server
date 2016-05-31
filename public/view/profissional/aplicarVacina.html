@@ -59,29 +59,33 @@
   </div>
 </header>
 </section>
-<nav class="menu">
+<nav class="menuV">
 		<a class="btn-close"><i class="fa fa-times"></i></a>
 		<li><a>Informe o numero do lote</a></li>
-    <input class="lote" placeholder="  Nº DO LOTE"></input>
-    <button class="btn-aplicar" onclick="aplicar('bcg')">APLICAR</button>
+    <input class="loteV" placeholder="  Nº DO LOTE" id="c" name="muda-div"></input>
+    <button class="btn-aplicar" onclick="aplicar">APLICAR</button>
 
 </nav>
 <script>
 	$(".btn-menu").click(function(){
-		$(".menu").show();
+		$(".menuV").show();
 	});
 	$(".btn-close").click(function(){
-		$(".menu").hide();
+		$(".menuV").hide();
 	});
   $(".btn-aplicar").click(function(){
-    $(".menu").hide();
+    $(".menuV").hide();
   });
 </script>
 <script>
-function aplicar(identificador){
-  var input = document.getElementById('lote').value;
-  if(input != ''){
-    document.getElementById(identificador).style.backgroundColor = '#2ECC71'; 
-  }
-}
+$(document).ready(function(){
+      $("#bcg").css("background-color","#fff");
+      $("#c").change(function(){
+                if($(this).val() != ' ') {
+      $("#bcg").css("background-color","#2ECC71");
+                } else {
+      $("#bcg").css("background-color","#fff");
+                }
+        });
+    });
 </script>
