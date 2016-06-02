@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Evandro Costa">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu Profissional De Saude</title>
+	<link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style-menu.css">
+	<link rel="stylesheet" href="css/formCadastro.css">
+	<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.css">	
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap-responsive.css">
+	
+</head>
+<body ng-app="menuCidadao">
+
+<a href="cidadao.html"><img src="img\logo.png" class="img-responsive" alt="Imagem responsiva"></a>
+
+<div class="cabecalho">
+
+	<a href="#imprimir"><div class="containe" id="aplicar">
+		<br><img class="icon" src="img/print.png">
+	<p class="texto">Imprimir Cartão</p>
+	</div></a></a>
+
+	<a href="#"><div class="containe" id="visualizar">
+		<br><img class="icon" src="img/visualizar.png">
+		<p class="texto">Vizualizar Cartão</p>
+	</div></a>
+
+	<a href="#"><div class="containe" id="atualizar">
+		<br><img class="icon" src="img/atualizar.png">
+		<p class="texto">Atualizar Cadastro</p>
+	</div></a>
+
+
+	<div ng-view=""></div>
+
+
+	<!-- CHAMADAS JS -->
+	<script src="vendor/jquery/dist/jquery.min.js"></script>
+	<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="vendor/jquery/dist/jquery.js"></script>
+	<script src="vendor/angular/angular.js"></script>
+	<script src="vendor/angular-route/angular-route.js"></script>
+
+	<!-- MAIN -->
+	<script src="js/main.js"></script>
+	
+
+	<!-- CONTROLLERS -->
+	<script src="js/controllers/profissionalCtrl/cadastrarCtrl.js"></script>
+	<script src="js/controllers/profissionalCtrl/atualizarCadastroCtrl.js"></script>
+	<script src="js/controllers/profissionalCtrl/visualizarCartaoCtrl.js"></script>
+	<script src="js/controllers/profissionalCtrl/aplicarVacinaCtrl.js"></script>
+		
+
+</body>
+</html>
