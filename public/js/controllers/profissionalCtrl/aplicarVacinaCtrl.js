@@ -1,3 +1,3 @@
-angular.module('menuProfi').controller("aplicarVacinaCtrl", function($scope){
+angular.module('vacinalegal').controller("aplicarVacinaCtrl", function($scope){
 
 });

@@ -1,5 +1,5 @@
 <div class="cabecalho">
-	<a href="#homeUnidade"><div id="voltar">
+	<a href="#homeCidadao"><div id="voltar">
 		<br><img class="icon" src="img/seta.png">
 	  	<p class="texto">Voltar</p></div>
 	</a>
@@ -24,14 +24,43 @@
 					</div>
 				</div>
 				<div class="form-horizontal">
-					<div class="form-group">	
-						<label for="txtCrm" class="col-sm-1 col-md-2 control-label">CRM:</label>
+					<div class="form-group">
+						<label for="txtNomeMae" class="col-sm-3 col-md-2 control-label">NOME DA MÃE:</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" id="txtCrm" placeholder="Número do CRM">
+							<input type="text" id="txtNomeMae" class="form-control" placeholder="Nome Completo">
+						</div>	
+						<label for="txtCpf" class="col-sm-1 col-md-2 control-label">CPF:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="txtCpf" placeholder="Número do CPF">
+						</div>
+					</div>
+				</div>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtNomePai" class="col-sm-3 col-md-2 control-label">NOME DO PAI:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="txtNomePai" placeholder="Nome Completo">
 						</div>
 					</div>
 				</div>
 				<div class="row">
+					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-lg-2 col-sm-offset-3 col-md-offset-2">
+						<label for="txtTipoSangue">TIPO SANGUÍNEO</label>
+						<select class="form-control" name="txtTipoSangue" id="txtTipoSangue">
+							<option value="A+">A+</option>
+							<option value="A-">A-</option>
+							<option value="B+">B+</option>
+							<option value="B-">B-</option>
+							<option value="AB+">AB+</option>
+							<option value="AB-">AB-</option>
+							<option value="O+">O+</option>
+							<option value="O-">O-</option>
+						</select>
+					</div>
+					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-sm-offset-3 col-md-offset-0">
+						<label for="txtFone">TELEFONE</label>
+						<input type="text" class="form-control" id="txtFone" placeholder="(00)00000-0000">
+					</div>
 					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-lg-2 col-sm-offset-3 col-md-offset-2">
 						 <label for="txtDataNascimento">DATA DE NASC</label>
 						<input type="date" class="form-control" id="txtDataNascimento" placeholder="00/00/0000">
@@ -45,7 +74,7 @@
 					</div>
 				</div>
 			</header>
-		</div>
+		 </div>
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
@@ -88,7 +117,7 @@
 	</div>
 </section>
 <div align="center">
-	<div align="center">
-		<br><button ng-click="cadastrarProf()" class="btn-cadastrar">CADASTRAR</button>
-</div>
+	<a href="profissional.html">
+		<br><input type="submit" name="submit"  value="SALVAR ATUALIZAÇÃO" class="btn-cadastrar">
+	</a>
 </div>

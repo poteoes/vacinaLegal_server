@@ -1,5 +1,13 @@
-<section class="container">
-<header class="cartao">
+<div class="cabecalho">
+  <a href="#homeProfissional"><div id="voltar">
+    <br><img class="icon" src="img/seta.png">
+      <p class="texto">Voltar</p></div>
+  </a>
+</div>
+<div class="cartao">
+  <h4>Nome:</h4>
+  <h4>CPF:</h4>
+</div>
 <div class="caixa">
   <div class="col-md-1">BCG-ID</div>
   <div class="col-md-1">HEPATITE B</div>
@@ -13,9 +21,7 @@
   <div class="col-md-1">MENIGOC. B</div>
   <div class="col-md-1">TRIPL. VIRAL</div>
   <div class="col-md-1">VARICELA</div>
-  
   <!-- DOSE UNICA E PRIMEIRA -->
-
   <div class="col-md-1" id="bcg"><button class="btn-menu">ÚNICA</div></button>
   <div class="col-md-1" id="hepatite"><button class="btn-menu">1ª DOSE</div></button>
   <div class="col-md-1" id="dtp"><button class="btn-menu">1ª DOSE</div></button>
@@ -28,7 +34,6 @@
   <div class="col-md-1" id="menigocB"><button class="btn-menu">1ª DOSE</div></button>
   <div class="col-md-1" id="tripl"><button class="btn-menu">1ª DOSE</div></button>
   <div class="col-md-1" id="varicela"><button class="btn-menu">1ª DOSE</div></button>
-
   <!-- SEGUNDA DOSE -->
   <div class="col-md-1" id="bcg"></div>
   <div class="col-md-1" id="hepatite"><button class="btn-menu">2ª DOSE</div></button>
@@ -42,7 +47,6 @@
   <div class="col-md-1" id="menigocB"><button class="btn-menu">2ª DOSE</div></button>
   <div class="col-md-1" id="tripl"><button class="btn-menu">2ª DOSE</div></button>
   <div class="col-md-1" id="varicela"><button class="btn-menu">2ª DOSE</div></button>
-
   <!-- TERCEIRA DOSE -->
   <div class="col-md-1" id="bcg"></div>
   <div class="col-md-1" id="hepatite"><button class="btn-menu">3ª DOSE</div></button>
@@ -56,15 +60,12 @@
   <div class="col-md-1" id="menigocB"><button class="btn-menu">3ª DOSE</div></button>
   <div class="col-md-1" id="tripl"></div>
   <div class="col-md-1" id="varicela"></div>
-  </div>
-</header>
-</section>
+</div>
 <nav class="menuV">
 		<a class="btn-close"><i class="fa fa-times"></i></a>
 		<li><a>Informe o numero do lote</a></li>
     <input class="loteV" placeholder="  Nº DO LOTE" id="c" name="muda-div"></input>
     <button class="btn-aplicar" onclick="aplicar">APLICAR</button>
-
 </nav>
 <script>
 	$(".btn-menu").click(function(){
@@ -79,13 +80,13 @@
 </script>
 <script>
 $(document).ready(function(){
-      $("#bcg").css("background-color","#fff");
-      $("#c").change(function(){
-                if($(this).val() != ' ') {
-      $("#bcg").css("background-color","#2ECC71");
-                } else {
-      $("#bcg").css("background-color","#fff");
-                }
-        });
+  $("#bcg").css("background-color","#fff");
+  $("#c").change(function(){
+            if($(this).val() != ' ') {
+  $("#bcg").css("background-color","#2ECC71");
+            } else {
+  $("#bcg").css("background-color","#fff");
+            }
     });
+});
 </script>

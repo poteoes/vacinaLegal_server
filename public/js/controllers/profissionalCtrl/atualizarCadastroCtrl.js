@@ -1,3 +1,3 @@
-angular.module('menuProfi').controller("atualizarCadastroCtrl", function($scope){
+angular.module('vacinalegal').controller("atualizarCadastroCtrl", function($scope){
 
 });

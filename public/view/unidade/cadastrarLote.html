@@ -1,0 +1,48 @@
+<div class="cabecalho">
+	<a href="#homeUnidade"><div id="voltar">
+		<br><img class="icon" src="img/seta.png">
+	  	<p class="texto">Voltar</p></div>
+	</a>
+</div>
+<section class="cadastrar">
+	<div class="row">
+		<div class="col-sm-12">
+			<header>
+				<h2><span aria-hidden="true"> Dados</span></h2>
+				<hr style="border-color: #2ECC71;"> 
+				<div style="margin-top: -20px;"></div>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtLote" class="col-sm-3 col-md-2 control-label">Nº DO LOTE:</label>
+						<div class="col-sm-4">
+							<input type="text" id="lote" class="form-control" placeholder="Nº Lote">
+						</div>
+						<label for="txtNomeVacina" class="col-sm-1 col-md-2 control-label">NOME DA VACINA:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="txtNomeVacina" placeholder="Nome da Vacina">
+						</div>
+					</div>
+				</div>
+				<div class="form-horizontal">
+					<div class="form-group">	
+						<label for="txtQuantidade" class="col-sm-1 col-md-2 control-label">QUANTIDADE:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="txtQuantidade" placeholder="Quantidade">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-lg-2 col-sm-offset-3 col-md-offset-2">
+						 <label for="txtDataValidade">DATA DE VALIDADE</label>
+						<input type="date" class="form-control" id="txtDataValidade" placeholder="00/00/0000">
+					</div>
+				</div>
+			</header>
+		</div>
+	</div>
+</section>
+<div align="center">
+	<div align="center">
+		<button ng-click="cadastrarLote()" class="btn-cadastrar">CADASTRAR</button>
+	</div>
+</div>
