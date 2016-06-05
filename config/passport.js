@@ -2,6 +2,7 @@
 var passport = require('passport');
 var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
 var mongoose = require('mongoose');
+var FacebookStrategy = require('passport-facebook').Strategy;
 
 module.exports = function () {
     
@@ -20,6 +21,19 @@ module.exports = function () {
                 console.log(err);
                 return done(err);
             }
+            return done(err, user);
+        });
+    }));
+    
+    passport.use(new FacebookStrategy({
+        clientID: '128217050926502',
+        clientSecret: '0ecf466b80f472dd9e3335ee7cb08398',
+        callbackURL: 'http://localhost:3000/facebook/oauth/calback' || 
+            'https://vacinalegal.herokuapp.com/facebook/oauth/calback',
+        enableProof: true
+    },
+    function(acessToken, refreshToken, profile, done){
+        User.findOrCreate({facebookId: profile.id}, function(err, user){
             return done(err, user);
         });
     }));

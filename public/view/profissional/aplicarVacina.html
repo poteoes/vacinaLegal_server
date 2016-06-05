@@ -61,21 +61,21 @@
   <div class="col-md-1" id="tripl"></div>
   <div class="col-md-1" id="varicela"></div>
 </div>
-<nav class="menuV">
+<nav class="menu">
 		<a class="btn-close"><i class="fa fa-times"></i></a>
 		<li><a>Informe o numero do lote</a></li>
-    <input class="loteV" placeholder="  Nº DO LOTE" id="c" name="muda-div"></input>
-    <button class="btn-aplicar" onclick="aplicar">APLICAR</button>
+    <input class="lote" placeholder="  Nº DO LOTE"></input>
+    <button class="btn-aplicar" onclick="aplicar('bcg')">APLICAR</button>
 </nav>
 <script>
 	$(".btn-menu").click(function(){
-		$(".menuV").show();
+		$(".menu").show();
 	});
 	$(".btn-close").click(function(){
-		$(".menuV").hide();
+		$(".menu").hide();
 	});
   $(".btn-aplicar").click(function(){
-    $(".menuV").hide();
+    $(".menu").hide();
   });
 </script>
 <script>

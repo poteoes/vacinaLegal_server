@@ -1,0 +1,8 @@
+set NODE_ENV=test
+set SELENIUM_USER=nome_de_um_usuario_no_github
+set SELENIUM_USER_PASSWORD=senha_do_usuario
+set GOOGLE_CLIENT_ID="852766170394-15eheirs43q1rqmd3rvu1imcejs64n2l.apps.googleusercontent.com"
+set GOOGLE_CLIENT_SECRET="PyHQUMlFf3X0m9ONtg_EWsXS"
+set FACEBOOK_CLIENT_ID = "128217050926502"
+set FACEBOOK_CLIENT_SECRET= "0ecf466b80f472dd9e3335ee7cb08398"
+protractor config/protractor.js
