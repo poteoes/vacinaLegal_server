@@ -1,3 +1,3 @@
-angular.module('menuProfi').controller("visualizarCartaoCtrl", function($scope){
+angular.module('vacinalegal').controller("visualizarCartaoCtrl", function($scope){
 
 });
