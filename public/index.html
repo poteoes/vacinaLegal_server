@@ -10,6 +10,55 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.css">	
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet" type="text/css">
+		<script type="text/javascript">
+			function callBackMudancaStatus(response){
+
+				if(response.status === 'connected'){
+					$('#logar').hide();
+					$('#status').append('<a href="javascript:void(0);" id="logout" onclick="logOut();">Sair</a>');
+					testAPI();
+				}else if(response.status === 'not_authorized'){
+					$('#status').append('<p>Por favor, faça login no aplicativo<p>');
+					$('#logout').remove();
+				}else{
+					$('#logout').remove();
+					$('#status').append('<p>Faça login do Facebook!<p>');
+				}
+			}
+			window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : '128217050926502',
+			      cookie      : true,
+			      version    : 'v2.6'
+			    });
+			    FB.getLoginStatus(function(response){
+			    	callBackMudancaStatus(response);
+			    });
+		 	};
+		 	(function(d, s, id){
+				 var js, fjs = d.getElementsByTagName(s)[0];
+				 if (d.getElementById(id)) {return;}
+				 js = d.createElement(s); js.id = id;
+				 js.src = "//connect.facebook.net/en_US/sdk.js";
+				 fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		 	function testAPI(){
+		 		FB.api('/me', function(response){
+		 			$('#status').append('<p>Olá, '+response.name+' seja bem vindo!<p>');
+		 		});
+		 	}
+		 	function logOut(){
+		 		FB.logout(function(response){
+		 			callBackMudancaStatus(response);
+		 			$('#status').append('Você acaba de fazer logOut');
+		 		});
+		 	}
+		 	function login(){
+		 		FB.login(function(response){
+		 			callBackMudancaStatus(response);
+		 		});
+		 	}
+		</script>
 	</head>
 	<body>
 		<!-- LOGO -->
