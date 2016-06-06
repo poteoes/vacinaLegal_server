@@ -14,7 +14,7 @@ module.exports = function (app) {
         failureRedirect: '/auth/google'
     }));
     
-    app.get('auth/facebook',
+    app.get('/auth/facebook',
        passport.authenticate('facebook'));
        
     app.get('/facebook/oauth/calback',

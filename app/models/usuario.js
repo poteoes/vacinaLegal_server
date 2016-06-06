@@ -5,7 +5,14 @@ module.exports = function () {
     var schema = mongoose.Schema({
         googleId: {
             type: String,
-            required : true,
+            required : false,
+            index : {
+                unique : true
+            }
+        },
+        fbId: {
+            type: String,
+            required : false,
             index : {
                 unique : true
             }
@@ -16,6 +23,10 @@ module.exports = function () {
             index : {
                 unique : true
             }
+        },
+        nivelErarquia: {
+            type: Number,
+            required: false
         },
         inclusao: {
             type: Date,
