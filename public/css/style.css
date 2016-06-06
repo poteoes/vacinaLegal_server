@@ -137,18 +137,11 @@ a:hover {
 	border-radius: 12px;
 }
 h5{
-	margin-top: 250px; 
+	margin-top: 200px; 
 	color: red;
 }
 
 /* PLUGIN FACE e GOOGLE */
-.g-signin2, .fb-login-button{
-	float: left; 
-	margin: auto; 
-	margin-left: 20px; 
-	margin-top: 20px;
-}
-
 img.iconeD{
 	display: block; 
 	float: right; 
