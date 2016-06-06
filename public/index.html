@@ -4,12 +4,15 @@
 		<meta charset="utf-8">
 		<meta name="author" content="Evandro Costa">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="google-signin-client_id" content="240625683385-jjep8khk35kb7801aqjuka3228me9a61.apps.googleusercontent.com">
+		<meta name="google-signin-scope" content="profile email">
 		<title>VacinaLegal</title>
 		<link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.css">	
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+       	<script src="https://apis.google.com/js/api:client.js"></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<script type="text/javascript">
 			function callBackMudancaStatus(response){
 
@@ -59,6 +62,33 @@
 		 		});
 		 	}
 		</script>
+		<script>
+		  	var googleUser = {};
+			var startApp = function() {
+			    gapi.load('auth2', function(){
+			      // Retrieve the singleton for the GoogleAuth library and set up the client.
+			      auth2 = gapi.auth2.init({
+			        client_id: '240625683385-jjep8khk35kb7801aqjuka3228me9a61.apps.googleusercontent.com',
+			        cookiepolicy: 'single_host_origin',
+			        // Request scopes in addition to 'profile' and 'email'
+			        //scope: 'additional_scope'
+			      });
+			      attachSignin(document.getElementById('customBtn'));
+			    });
+			};
+
+		  	function attachSignin(element) {
+			    console.log(element.id);
+			    auth2.attachClickHandler(element, {},
+			        function(googleUser) {
+			          document.getElementById('name').innerText = "Signed in: " +
+			              googleUser.getBasicProfile().getName();
+			        }, function(error) {
+			          alert(JSON.stringify(error, undefined, 2));
+			    });
+		  	}
+		</script>
+
 	</head>
 	<body>
 		<!-- LOGO -->
