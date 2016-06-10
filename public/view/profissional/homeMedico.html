@@ -1,16 +1,15 @@
-<a href="#home" class="sair">Sair</a>
-<div class="cabecalho">	
-  <a href="#atualizarEndereco"><div class="containe" id="atualizarEndereco">
-    <br><img class="icon" src="img/atualizar.png">
-    <p class="texto">Atualizar Cadastro</p></div>
+<div class="cabecalho">
+  <a href="#medico"><div id="voltar">
+    <br><img class="icon" src="img/seta.png">
+      <p class="texto">Voltar</p></div>
   </a>
-	<a href="#"><div class="containe" id="imprimir">
-		<br><img class="icon" src="img/print.png">
-		<p class="texto">Imprimir Cartão</p></div>
-	</a>
 </div>
-<div class="busca"></div>
-<div class="caixa">
+<div class="cartao"></div>
+<div id="cpf">
+<input class="aplicar" placeholder="  Nº CPF" id="v" name="muda-div"></input>
+<button class="btn-aplicar" onclick="visualizar">VISUALIZAR</button>
+</div>
+<div class="caixa" id="cartao">
   <div class="col-md-1">BCG-ID</div>
   <div class="col-md-1">HEPATITE B</div>
   <div class="col-md-1">DTP</div>
@@ -63,3 +62,16 @@
   <div class="col-md-1" id="tripl"></div>
   <div class="col-md-1" id="varicela"></div>
 </div>
+
+<script>
+$(document).ready(function(){
+  $("#cartao").css("display","none");
+  $("#v").change(function(){
+            if($(this).val() === '123') {
+  $("#cartao").css("display","block") && $("#cpf").css("display","none");
+            } else {
+  $("#cartao").css("display","none");
+            }
+    });
+});
+</script>
