@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/login.css">
+<div class="user">
+  <img id="user-photo" src="http://mariovalney.com/wp-content/uploads/2015/06/user-anonimo.jpg">
+  <h1>Olá,Usuário!</h1>
+  <form>
+	<div class="form-input">
+		<input type="text" name="username" placeholder="Nº CPF" required autofocus>
+	</div>
+	<div class="form-input1">
+		<input type="password" name="password" placeholder="Digite Senha" required>		
+	</div>
+	<input type="submit" name="submit" value="ENTRAR" class="btn-login"><br>
+	<a href="#medico"><input type="submit" name="submit" value="Entrar com Médico" class="btn-login"><br></a>
+	<a href="#reset">Esqueceu a senha?</a>
+	<p>Primeiro acesso?<a href="#primeiro"> Cadastre-se aqui</a></p>
+   </form>
+   <p class="texto2">Acesso pelo Facebook ou Google +</p>
+	<a href="/auth/facebook" id="login"><img src="img/face.png"></a>
+	<div id="gSignInWrapper">
+	    <div id="customBtn" class="customGPlusSignIn">
+	      <img src="img/google.png">
+	    </div>
+	</div>
+	<script>startApp();</script>
+	<h5>O usuário para acessar o ambiente, é necessário ter uma conta no Facebook ou Google.</h5>
+</div>
+<p class="rodapeHome">Copyright © Vacina Legal 2016. Todos direitos reservados.</p>

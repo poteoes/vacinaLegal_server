@@ -1,25 +1,45 @@
-angular.module('vacinalegal', ['ngRoute', 'ngResource'])
+angular.module('vacinalegal', ['ngRoute'])
 .config(function($routeProvider) {
 	
 	//HOME PRINCIPAL
 	$routeProvider
 	.when('/home',{
+		controller:'homeCtrl',
 		templateUrl:'view/home.html'
-	});		
-	$routeProvider
-	.when('/unidade',{
-		templateUrl:'view/unidade.html'
 	});
 	$routeProvider
-	.when('/cidadao',{
+	.when('/login',{
+		controller:'loginCtrl',
+		templateUrl:'view/login.html'
+	});	
+	$routeProvider
+	.when('/loginCidadao',{
+		controller:'loginCidadaoCtrl',
 		templateUrl:'view/loginCidadao.html'
 	});
 	$routeProvider
-	.when('/profissional',{
-		templateUrl:'view/loginProfis.html'
+	.when('/loginProf',{
+		controller:'loginProfCtrl',
+		templateUrl:'view/loginProf.html'
+	});
+	$routeProvider
+	.when('/loginUnidade',{
+		controller:'loginUnidadeCtrl',
+		templateUrl:'view/loginUnidade.html'
+	});
+	$routeProvider
+	.when('/primeiro',{
+		controller:'primeiroAcessoCtrl',
+		templateUrl:'view/primeiroAcesso.html'
+	});
+	$routeProvider
+	.when('/reset',{
+		controller:'resetCtrl',
+		templateUrl:'view/reset.html'
 	});
 	$routeProvider
 	.when('/duvida',{
+		controller:'duvidaCtrl',
 		templateUrl:'view/duvida.html'
 	});
 
@@ -28,6 +48,16 @@ angular.module('vacinalegal', ['ngRoute', 'ngResource'])
 	.when('/homeProfissional',{
 		controller:'homeProfissionalCtrl',
 		templateUrl:'view/profissional/homeProfissional.html'
+	});
+	$routeProvider
+	.when('/medico',{
+		controller:'medicoCtrl',
+		templateUrl:'view/profissional/medico.html'
+	});
+	$routeProvider
+	.when('/homeMedico',{
+		controller:'homeMedicoCtrl',
+		templateUrl:'view/profissional/homeMedico.html'
 	});
 	$routeProvider
 	.when('/cadastrar',{
@@ -40,34 +70,34 @@ angular.module('vacinalegal', ['ngRoute', 'ngResource'])
 		templateUrl:'view/profissional/atualizarCadastro.html'
 	});
 	$routeProvider
-	.when('/visualizar',{
-		controller:'visualizarCartaoCtrl',
-		templateUrl:'view/profissional/visualizarCartao.html'
-	});
-	$routeProvider
 	.when('/aplicar',{
 		controller:'aplicarVacinaCtrl',
 		templateUrl:'view/profissional/aplicarVacina.html'
 	});
+	$routeProvider
+	.when('/atualizarCartao',{
+		controller:'atualizarCartaoCtrl',
+		templateUrl:'view/profissional/atualizarCartao.html'
+	});
 
 	// HOME CIDADÃO
 	$routeProvider
-	.when('/cidadao/homeCidadao',{
+	.when('/homeCidadao',{
 		controller:'homeCidadaoCtrl',
 		templateUrl:'view/cidadao/homeCidadao.html'
 	});
 	$routeProvider
-	.when('/cidadao/atualizarEndereco',{
+	.when('/atualizarEndereco',{
 		controller:'atualizarEnderecoCtrl',
 		templateUrl:'view/cidadao/atualizarEndereco.html'
 	});
 	$routeProvider
-	.when('/cidadao/cartaoVacina',{
+	.when('/cartaoVacina',{
 		controller:'cartaoVacinaCtrl',
 		templateUrl:'view/cidadao/cartaoVacina.html'
 	});
 	$routeProvider
-	.when('/cidadao/imprimirCartao',{
+	.when('/imprimirCartao',{
 		controller:'imprimirCartaoCtrl',
 		templateUrl:'view/cidadao/imprimirCartao.html'
 	});
@@ -100,6 +130,6 @@ angular.module('vacinalegal', ['ngRoute', 'ngResource'])
 	});
 	$routeProvider
 	.otherwise({
-		redirectTo:'/home'
+		redirectTo:'/login'
 	});
 });

@@ -1,0 +1,24 @@
+<a href="#login" class="sair">Sair</a>
+<div class="cabecalho">
+  <a href="#homeMedico" id="visualizar"><div id="voltar">
+    <br><img class="icon" src="img/visualizar.png">
+      <p class="texto">Visualizar Cartão</p></div>
+  </a>
+</div>
+<div class="cartao"></div>
+<div id="crm">
+  <input class="aplicar" placeholder="  Nº CRM" id="c" name="muda-div"></input>
+  <button class="btn-aplicar" onclick="ok">OK</button>
+</div>
+<script>
+$(document).ready(function(){
+  $("#visualizar").css("display","none");
+  $("#c").change(function(){
+            if($(this).val() === '123') {
+  $("#visualizar").css("display","block") && $("#crm").css("display","none");
+            } else {
+  $("#visualizar").css("display","none");
+            }
+    });
+});
+</script>

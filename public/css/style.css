@@ -29,6 +29,15 @@ img{
 	background-color: #ddd; 
 	-webkit-box-shadow: 7px 7px 10px #fff;
 }
+.usuario{
+	float: right;
+	margin-top: -30px;
+}
+.sair{
+	float: right;
+	margin-right: 20px;
+	margin-top: -50px;
+}
 .vacina{
 	width: 100%; 
 	float: left; 
@@ -42,10 +51,11 @@ img{
 .containe{
 	width: 280px; 
 	height: 80px; 
-	float: right; 
+	float: left; 
 	margin-top: 5px; 
 	border-radius: 12px; 
 	background-color: #ddd;
+	cursor: pointer;
 }
 img.icon{
 	display: block; 
@@ -110,38 +120,55 @@ a{
 a:hover {
 	text-decoration: underline;
 }
-.content{
-	width: 300px; 
-	height: 400px; 
-	text-align: center; 
-	background-color: rgba(255,255,255,2.0); 
-	border-bottom: 4px solid #ddd; 
-	margin: auto; 
-	float: left; 
-	margin-left: 110px; 
-	margin-top: 30px; 
-	border-radius: 12px;
-}
 .texto2{
 	margin-top: 20px;
+	text-align: center;
 }
-.left, .right{
+.left, .right, .content{
 	width: 300px; 
 	height: 400px; 
 	float: left; 
 	background-color: #eee; 
 	text-align: center; 
 	margin: auto; 
-	margin-left: 110px; 
+	margin-left: 10px; 
 	margin-top: 50px; 
 	border-radius: 12px;
 }
 h5{
-	margin-top: 200px; 
+	text-align: center;
 	color: red;
+	margin-top: 10px;
 }
 
 /* PLUGIN FACE e GOOGLE */
+.user {
+   padding: 50px 20px;
+   background: #FFFFFF;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+   width: 330px;
+   display: block;
+   margin: 0 auto;
+   margin-top: 10px;
+}
+#user-photo {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto 10px auto;
+}
+h1 {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: lighter;
+}
+#user-name {
+	color: #0066AA;
+	font-weight: bold;
+}
 img.iconeD{
 	display: block; 
 	float: right; 
@@ -232,6 +259,32 @@ h2{
     height:32px;
     width:260px;
 }
+.medicoEnfer {
+   padding: 50px 20px;
+   background: #FFFFFF;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+   width: 330px;
+   height: 200px;
+   display: block;
+   margin: 0 auto;
+   margin-top: 60px;
+}
+#txtAcessar{
+	float:left;
+    margin-top: 40px;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+    background-color:#ddd;
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+}
 
 /* CARTÃO DE VACINA */
 .col-md-1{
@@ -242,7 +295,7 @@ h2{
 }
 .cartao{
 	width: 100%; 
-	height: 200px; 
+	height: 100px; 
 	margin-left: 30px; 
 	margin: auto;
 }
@@ -253,10 +306,15 @@ h2{
 	height: 70px; 
 	cursor: pointer; 
 	background-color: #fff;
+	margin-top: -10px;
+}
+#bcg p{
+	color: red;
+
 }
 .btn-aplicar{
-	margin-left: 46%; 
-	margin-top: 20px; 
+	height: 45px; 
+	width: 200px;
 	padding: 15px 30px; 
 	cursor: pointer; 
 	color: #fff; 
@@ -319,6 +377,16 @@ h2{
 	border: none; 
 	margin-bottom: 20px; 
 	border-radius: 4px; 
+	background-color: #000;
+}
+.aplicar{ 
+	margin-left: 10px;
+	height: 45px; 
+	width: 300px; 
+	font-size: 18px; 
+	border: none; 
+	margin-bottom: 20px; 
+	border-radius: 4px; 
 	background-color: #fff;
 }
 
@@ -332,4 +400,8 @@ h2{
 }
 .rodape{
 	text-align: center;
+}
+.rodapeHome{
+	text-align: center;
+	margin-top: 15px;
 }
