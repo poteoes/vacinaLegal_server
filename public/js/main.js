@@ -7,16 +7,8 @@ angular.module('vacinalegal', ['ngRoute', 'ngResource'])
 		templateUrl:'view/home.html'
 	});		
 	$routeProvider
-	.when('/unidade',{
-		templateUrl:'view/unidade.html'
-	});
-	$routeProvider
-	.when('/cidadao',{
-		templateUrl:'view/loginCidadao.html'
-	});
-	$routeProvider
-	.when('/profissional',{
-		templateUrl:'view/loginProfis.html'
+	.when('/login',{
+		templateUrl:'view/login.html'
 	});
 	$routeProvider
 	.when('/duvida',{
@@ -100,6 +92,6 @@ angular.module('vacinalegal', ['ngRoute', 'ngResource'])
 	});
 	$routeProvider
 	.otherwise({
-		redirectTo:'/home'
+		redirectTo:'/login'
 	});
 });
