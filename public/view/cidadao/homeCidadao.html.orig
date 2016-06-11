@@ -1,0 +1,78 @@
+<a href="#home" class="sair">Sair</a>
+<div class="cabecalho">	
+<<<<<<< HEAD
+	<a href="#cartaoVacina"><div class="containe" id="cartaoVacina">
+		<br><img class="icon" src="/public/img/visualizar.png">
+		<p class="texto">Vizualizar Cartão</p></div>
+	</a>
+	<a href="#atualizarEndereco"><div class="containe" id="atualizarEndereco">
+		<br><img class="icon" src="/public/img/atualizar.png">
+		<p class="texto">Atualizar Cadastro</p></div>
+	</a>
+	<div id="status"></div>
+	<p>Olá, <span id="user-name">visitante</span>!</p>
+=======
+  <a href="#atualizarEndereco"><div class="containe" id="atualizarEndereco">
+    <br><img class="icon" src="img/atualizar.png">
+    <p class="texto">Atualizar Cadastro</p></div>
+  </a>
+	<a href="#"><div class="containe" id="imprimir">
+		<br><img class="icon" src="img/print.png">
+		<p class="texto">Imprimir Cartão</p></div>
+	</a>
+</div>
+<div class="busca"></div>
+<div class="caixa">
+  <div class="col-md-1">BCG-ID</div>
+  <div class="col-md-1">HEPATITE B</div>
+  <div class="col-md-1">DTP</div>
+  <div class="col-md-1">HiB</div>
+  <div class="col-md-1">POLIOMIELTE</div>
+  <div class="col-md-1">ROTAVIRUS</div>
+  <div class="col-md-1">PNEUM.CONJ</div>
+  <div class="col-md-1">MENIGOC. C</div>
+  <div class="col-md-1">MENIGOC.ACY</div>
+  <div class="col-md-1">MENIGOC. B</div>
+  <div class="col-md-1">TRIPL. VIRAL</div>
+  <div class="col-md-1">VARICELA</div>
+  <!-- DOSE UNICA E PRIMEIRA -->
+  <div class="col-md-1" id="bcg"><button class="btn-menu">UNICA</div></button>
+  <div class="col-md-1" id="hepatite"><button class="btn-menu">1ª DOSE</div></button>
+  <div class="col-md-1" id="dtp"><button class="btn-menu">1ª DOSE</div></button>
+  <div class="col-md-1" id="hib"><button class="btn-menu">1ª DOSE</div></button>
+  <div class="col-md-1" id="polio"><button class="btn-menu">1ª DOSE</div></button>
+  <div class="col-md-1" id="rota"><button class="btn-menu">1ª DOSE</div></button>
+  <div class="col-md-1" id="pneum"><button class="btn-menu">1ª DOSE</div></button>
+  <div class="col-md-1" id="menigocC"><button class="btn-menu">1ª DOSE</div></button>
+  <div class="col-md-1" id="menigocA"><button class="btn-menu">REFORÇO</div></button>
+  <div class="col-md-1" id="menigocB"><button class="btn-menu">1ª DOSE</div></button>
+  <div class="col-md-1" id="tripl"><button class="btn-menu">1ª DOSE</div></button>
+  <div class="col-md-1" id="varicela"><button class="btn-menu">1ª DOSE</div></button>
+  <!-- SEGUNDA DOSE -->
+  <div class="col-md-1" id="bcg"></div>
+  <div class="col-md-1" id="hepatite"><button class="btn-menu">2ª DOSE</div></button>
+  <div class="col-md-1" id="dtp"><button class="btn-menu">2ª DOSE</div></button>
+  <div class="col-md-1" id="hib"><button class="btn-menu">2ª DOSE</div></button>
+  <div class="col-md-1" id="polio"><button class="btn-menu">2ª DOSE</div></button>
+  <div class="col-md-1" id="rota"><button class="btn-menu">2ª DOSE</div></button>
+  <div class="col-md-1" id="pneum"><button class="btn-menu">2ª DOSE</div></button>
+  <div class="col-md-1" id="menigocC"><button class="btn-menu">2ª DOSE</div></button>
+  <div class="col-md-1" id="menigocA"><button class="btn-menu">REFORÇO</div></button>
+  <div class="col-md-1" id="menigocB"><button class="btn-menu">2ª DOSE</div></button>
+  <div class="col-md-1" id="tripl"><button class="btn-menu">2ª DOSE</div></button>
+  <div class="col-md-1" id="varicela"><button class="btn-menu">2ª DOSE</div></button>
+  <!-- TERCEIRA DOSE -->
+  <div class="col-md-1" id="bcg"></div>
+  <div class="col-md-1" id="hepatite"><button class="btn-menu">3ª DOSE</div></button>
+  <div class="col-md-1" id="dtp"><button class="btn-menu">3ª DOSE</div></button>
+  <div class="col-md-1" id="hib"><button class="btn-menu">3ª DOSE</div></button>
+  <div class="col-md-1" id="polio"><button class="btn-menu">3ª DOSE</div></button>
+  <div class="col-md-1" id="rota"></div>
+  <div class="col-md-1" id="pneum"><button class="btn-menu">3ª DOSE</div></button>
+  <div class="col-md-1" id="menigocC"></div>
+  <div class="col-md-1" id="menigocA"><button class="btn-menu">REFORÇO</div></button>
+  <div class="col-md-1" id="menigocB"><button class="btn-menu">3ª DOSE</div></button>
+  <div class="col-md-1" id="tripl"></div>
+  <div class="col-md-1" id="varicela"></div>
+>>>>>>> 8ca00e6c61f7b8b083035ea75661e94cde7ed296
+</div>
