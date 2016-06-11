@@ -1,7 +1,12 @@
+<a href="#home" class="sair">Sair</a>
 <div class="cabecalho">
 	<a href="#visualizar"><div class="containe" id="visualizar">
 		<br><img class="icon" src="/public/img/visualizar.png">
 		<p class="texto">Vizualizar Cartão</p></div>
+	</a>
+	<a href="#aplicar"><div class="containe" id="cadastrar">
+		<br><img class="icon" src="img/aplicar.png">
+	  	<p class="texto">Aplicar Vacina</p></div>
 	</a>
 	<a href="#atualizar"><div class="containe" id="atualizar">
 		<br><img class="icon" src="/public/img/atualizar.png">
@@ -11,23 +16,4 @@
 		<br><img class="icon" src="/public/img/cadastro.png">
 	  	<p class="texto">Cadastro</p></div>
 	</a>
-	<div id="status"></div>
 </div>
-<div class="busca"></div>
-<h2>Buscar usuário cadastrado</h2>
-<div id="divBusca">
-    <input type="text" id="txtBusca" placeholder="Buscar..."/>
-    <img src="/public/img/search3.png" id="btnBusca" alt="Buscar"/>
-</div>
-<script>
-$(document).ready(function(){
-  $("#visualizar, #atualizar, #cadastrar").css("display","none");
-  $("#txtBusca").change(function(){
-            if($(this).val() === '123') {
-  $("#visualizar, #atualizar").css("display","block") && $("#cadastrar").css("display","none");
-            } else {
-  $("#cadastrar").css("display","block") && $("#visualizar, #atualizar").css("display","none");
-            }
-    });
-});
-</script>
