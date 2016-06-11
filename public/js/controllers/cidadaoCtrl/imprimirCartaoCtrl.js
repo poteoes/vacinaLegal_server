@@ -1,3 +1,4 @@
-angular.module('vacinalegal').controller("imprimirCartaoCtrl", function($scope){
+angular.module('vacinalegal').controller("imprimirCartaoCtrl", 
+    function($scope){
 
 });

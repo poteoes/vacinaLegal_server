@@ -1,7 +1,0 @@
-<div class="cabecalho">
-	<a href="#homeCidadao"><div id="voltar">
-		<br><img class="icon" src="/public/img/seta.png">
-	  	<p class="texto">Voltar</p></div>
-	</a>
-</div>
-<h5>Imprimir</h5>
