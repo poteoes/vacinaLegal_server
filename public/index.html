@@ -1,70 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="vacinalegal">
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="author" content="Evandro Costa">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>VacinaLegal</title>
-		<link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+		<!-- build:css css/index.min.css -->
+		<link rel="stylesheet"
+			href="vendor/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet"
+			href="vendor/bootstrap/dist/css/bootstrap-theme.css">
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.css">	
-		<script>
-		  	var googleUser = {};
-			var startApp = function() {
-			    gapi.load('auth2', function(){
-			      // Retrieve the singleton for the GoogleAuth library and set up the client.
-			      auth2 = gapi.auth2.init({
-			        client_id: '240625683385-jjep8khk35kb7801aqjuka3228me9a61.apps.googleusercontent.com',
-			        cookiepolicy: 'single_host_origin',
-			        // Request scopes in addition to 'profile' and 'email'
-			        //scope: 'additional_scope'
-			      });
-			      attachSignin(document.getElementById('customBtn'));
-			    });
-			};
-
-		  	function attachSignin(element) {
-			    console.log(element.id);
-			    auth2.attachClickHandler(element, {},
-			        function(googleUser) {
-			          document.getElementById('name').innerText = "Signed in: " +
-			              googleUser.getBasicProfile().getName();
-			        }, function(error) {
-			          alert(JSON.stringify(error, undefined, 2));
-			    });
-		  	}
-		</script>
-
+		<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.css">
+		<!-- endbuild -->
 	</head>
+
 	<body>
 		<!-- LOGO -->
-		<a href="#home"><img src="img\logo.png" class="img-responsive" alt="Imagem responsiva"></a>
+		<a href="#home"><img src="/public/img/logo.png" class="img-responsive" alt="Imagem responsiva"></a>
 		<div ng-view=""></div>
-		<!-- CHAMADAS JS -->
-		<script src="vendor/jquery/dist/jquery.min.js"></script>
-		<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="vendor/angular/angular.min.js"></script>
+		<!-- build:js js/index.min.js -->
+		
+		<script src="vendor/jquery/dist/jquery.js"></script>
+		<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
 		<script src="vendor/angular/angular.js"></script>
-		<script src="vendor/angular-route/angular-route.min.js"></script>
-		<script src="vendor/angular-resource/angular-resoucer.min.js"></script>
-		<!-- MAIN -->
-		<script src="js/main.js"></script>
-		<!-- CONTROLLERS PROFISSIONAL-->
+		<script src="vendor/angular-route/angular-route.js"></script>
+		<script src="vendor/angular-resource/angular-resource.js">
+			<!-- MAIN -->
+			<script src="js/main.js">
+		</script>
+		
 		<script src="js/controllers/profissionalCtrl/homeProfissionalCtrl.js"></script>
 		<script src="js/controllers/profissionalCtrl/cadastrarCtrl.js"></script>
 		<script src="js/controllers/profissionalCtrl/atualizarCadastroCtrl.js"></script>
 		<script src="js/controllers/profissionalCtrl/aplicarVacinaCtrl.js"></script>
 		<script src="js/controllers/profissionalCtrl/visualizarCartaoCtrl.js"></script>
-		<!-- CONTROLLERS CIDADÃO-->
+		
 		<script src="js/controllers/cidadaoCtrl/homeCidadaoCtrl.js"></script>
 		<script src="js/controllers/cidadaoCtrl/atualizarEnderecoCtrl.js"></script>
 		<script src="js/controllers/cidadaoCtrl/cartaoVacinaCtrl.js"></script>
 		<script src="js/controllers/cidadaoCtrl/imprimircartaoCtrl.js"></script>
-		<!-- CONTROLLERS UNIDADE-->
+		
 		<script src="js/controllers/unidadeCtrl/homeUnidadeCtrl.js"></script>
 		<script src="js/controllers/unidadeCtrl/cadastrarProfCtrl.js"></script>
 		<script src="js/controllers/unidadeCtrl/cadastrarLoteCtrl.js"></script>
 		<script src="js/controllers/unidadeCtrl/relatorioCtrl.js"></script>
 		<script src="js/controllers/unidadeCtrl/enviarAvisoCtrl.js"></script>
+		<!-- endbuild -->
 	</body>
+
 </html>
