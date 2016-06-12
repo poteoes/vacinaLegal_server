@@ -8,6 +8,6 @@ module.exports = function (app) {
     app.route('/pacientes')
         .get(controller.listapaciente)
         .post(controller.salvaPaciente);
-    app.route('/paciente/:cpf')
-        get(controller.obtendoResposavel);
+    app.route('/pacientes/:cpf')
+        .get(controller.obtendoResposavel);
 }

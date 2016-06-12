@@ -5,7 +5,7 @@ module.exports = function (app) {
 
     app.route('/profissionais')
         .get(controller.listaAplicador)
-        .post(controller.salvarAplicador);
+        .post(controller.salvaAplicador);
     app.route('/profissional/:id')
         .get(controller.obtemAplicador)
         .delete(controller.removeAplicador);
