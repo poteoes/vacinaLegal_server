@@ -9,5 +9,5 @@ module.exports = function (app) {
         .get(controller.listapaciente)
         .post(controller.salvaPaciente);
     app.route('/paciente/:cpf')
-        get(controller.obtendoResposavel);
+        .get(controller.obtendoResposavel);
 }
