@@ -10,8 +10,8 @@ module.exports = function (app) {
     ));
     
     app.get('google/calbackauth2', passport.authenticate('google', {
-        successRedirect: '/',
-        failureRedirect: '/auth/google'
+        successRedirect: '/home',
+        failureRedirect: '/login'
     }));
     
     app.get('/auth/facebook',
@@ -20,6 +20,6 @@ module.exports = function (app) {
     app.get('/facebook/oauth/calback',
         passport.authenticate('facebook', { failureRedirect: '/login'}),
         function (req, res) {
-            res.redirect('/');
+            res.redirect('/home');
         });
 };

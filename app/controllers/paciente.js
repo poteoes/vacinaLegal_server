@@ -9,10 +9,26 @@ module.exports = function (app) {
     var paciente = app.models.paciente;
 
     controller.listapaciente = function(req, res) {
-        var promise = Paciente.find().exec()
+        Paciente.find().exec()
         .then(
             function (pacientees) {
                 res.json(pacientees);
+            },
+            function (erro) {
+                console.error(erro);
+                res.status(500).json(erro);
+            }
+        );
+    };
+
+    controller.obtendoResposavel = function(req, res) {
+        var _cpf = req.params.cpf;
+        Paciente.find()
+        .where("cpf").equals(_cpf)
+        .exec()
+        .then(
+            function (paciente) {
+                res.json(paciente);
             },
             function (erro) {
                 console.error(erro);

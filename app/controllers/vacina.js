@@ -22,8 +22,10 @@ module.exports = function (app) {
     };
 
     controller.obtemVacina = function(req, res) {
-        var _id = req.params.id;
-        Vacina.findById(_id).exec()
+        var _lote = req.params.lote;
+        Vacina.find()
+        .where("lote").equals(_lote)
+        .exec()
         .then(
             function (vacina) {
                 if(!vacina) throw new Error("Vacina não encontrado");

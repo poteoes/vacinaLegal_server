@@ -1,46 +1,38 @@
 angular.module('vacinalegal', ['ngRoute'])
-.config(function($routeProvider) {
+.config(function($routeProvider, $httpProvider) {
+	
+	$httpProvider.interceptors.push('meuInterceptor');
 	
 	//HOME PRINCIPAL
 	$routeProvider
 	.when('/home',{
 		controller:'homeCtrl',
 		templateUrl:'view/home.html'
-	});
+	});		
 	$routeProvider
 	.when('/login',{
-		controller:'loginCtrl',
 		templateUrl:'view/login.html'
-	});	
-	$routeProvider
-	.when('/loginCidadao',{
-		controller:'loginCidadaoCtrl',
-		templateUrl:'view/loginCidadao.html'
 	});
-	$routeProvider
-	.when('/loginProf',{
-		controller:'loginProfCtrl',
-		templateUrl:'view/loginProf.html'
-	});
-	$routeProvider
-	.when('/loginUnidade',{
-		controller:'loginUnidadeCtrl',
-		templateUrl:'view/loginUnidade.html'
-	});
-	$routeProvider
-	.when('/primeiro',{
-		controller:'primeiroAcessoCtrl',
-		templateUrl:'view/primeiroAcesso.html'
-	});
-	$routeProvider
-	.when('/reset',{
-		controller:'resetCtrl',
-		templateUrl:'view/reset.html'
-	});
+	
 	$routeProvider
 	.when('/duvida',{
-		controller:'duvidaCtrl',
+		controller: 'primeroAcesso.js',
 		templateUrl:'view/duvida.html'
+	});
+
+	$routeProvider
+	.when('/primeiro',{
+		templateUrl: 'view/primeroAcesso.html'
+	})
+
+	// Medico
+	$routeProvider
+	.when('/homeMedico',{
+		templateUrl: 'view/profissional/homeMedico.html'
+	})
+	$routeProvider
+	.when('/medico',{
+		templateUrl: 'view/profissional/medico.html'
 	});
 
 	// HOME PROFISSIONAL
