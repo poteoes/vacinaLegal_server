@@ -22,7 +22,7 @@ angular.module('vacinalegal', ['ngRoute'])
 
 	$routeProvider
 	.when('/primeiro',{
-		templateUrl: 'view/primeroAcesso.html'
+		templateUrl: 'view/primeiroAcesso.html'
 	})
 
 	// Medico
