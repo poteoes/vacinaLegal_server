@@ -11,27 +11,36 @@ angular.module('vacinalegal', ['ngRoute'])
 	});		
 	$routeProvider
 	.when('/login',{
+		controller:'loginCtrl',
 		templateUrl:'view/login.html'
 	});
 	
 	$routeProvider
 	.when('/duvida',{
-		controller: 'primeroAcesso.js',
+		controller: 'duvidaCtrl',
 		templateUrl:'view/duvida.html'
 	});
 
 	$routeProvider
 	.when('/primeiro',{
+		controller:'primeiroAcessoCtrl',
 		templateUrl: 'view/primeiroAcesso.html'
+	})
+	$routeProvider
+	.when('/reset',{
+		controller:'resetCtrl',
+		templateUrl: 'view/reset.html'
 	})
 
 	// Medico
 	$routeProvider
 	.when('/homeMedico',{
+		controller:'homeMedicoCtrl',
 		templateUrl: 'view/profissional/homeMedico.html'
 	})
 	$routeProvider
 	.when('/medico',{
+		controller:'medicoCtrl',
 		templateUrl: 'view/profissional/medico.html'
 	});
 
@@ -119,6 +128,11 @@ angular.module('vacinalegal', ['ngRoute'])
 	.when('/enviarAviso',{
 		controller:'enviarAvisoCtrl',
 		templateUrl:'view/unidade/enviarAviso.html'
+	});
+	$routeProvider
+	.when('/gerenciarProf',{
+		controller:'gerenciarProfCtrl',
+		templateUrl:'view/unidade/gerenciarProf.html'
 	});
 	$routeProvider
 	.otherwise({
