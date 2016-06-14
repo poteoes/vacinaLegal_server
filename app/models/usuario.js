@@ -26,7 +26,29 @@ module.exports = function () {
         },
         nivelErarquia: {
             type: Number,
+            default: 1,
             required: false
+        },
+        idPaciente: {
+            type : mongoose.Schema.ObjectId,
+            index : {
+                unique : true
+            }, 
+            ref: 'Paciente'
+        },
+        idApricador: {
+            type : mongoose.Schema.ObjectId,
+            index : {
+                unique : true
+            }, 
+            ref: 'Aplicador'
+        },
+        idUnidade: {
+            type : mongoose.Schema.ObjectId,
+            index : {
+                unique : true
+            }, 
+            ref: 'Unidade'
         },
         inclusao: {
             type: Date,

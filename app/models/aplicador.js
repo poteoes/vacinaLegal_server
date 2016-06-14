@@ -22,6 +22,10 @@ module.exports = function () {
                 unique: true
             }
         },
+        cnpjSaude: {
+            type: Number,
+            required: true
+        },
         dataNascimento: {
             type: Date,
             required: true

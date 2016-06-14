@@ -22,7 +22,8 @@ module.exports = function () {
         vencimento: {
             type: Date,
             require: true
-        }
+        },
+        
     });
     
     return mongoose.model('Vacina', schema);

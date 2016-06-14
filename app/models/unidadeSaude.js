@@ -18,6 +18,17 @@ module.exports = function () {
         endereco: {
             type: String,
             require: true
+        },
+        email: {
+            type: String,
+            required: true
+        },
+        listFuncionario: {
+            type : [mongoose.Schema.ObjectId],
+            ref: 'Aplicador',
+            index : {
+                unique : true
+            }, 
         }
     });
     
