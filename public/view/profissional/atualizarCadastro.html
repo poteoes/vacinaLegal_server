@@ -15,59 +15,51 @@
 					<div class="form-group">
 						<label for="txtNome" class="col-sm-3 col-md-2 control-label">NOME:</label>
 						<div class="col-sm-4">
-							<input type="text" id="txtNome" class="form-control" placeholder="Nome Completo">
+							<input type="text" id="txtNome" class="form-control" placeholder="Nome Completo"
+							ng-model="paciente.name" required>
 						</div>
 						<label for="txtEmail" class="col-sm-1 col-md-2 control-label">EMAIL:</label>
 						<div class="col-sm-4">
-							<input type="email" class="form-control" id="txtEmail" placeholder="Informe o Email">
+							<span class="input-group-addon">@</span>
+							<input type="email" class="form-control" id="txtEmail" placeholder="Informe o Email"
+							ng-model="paciente.email" required>
 						</div>
 					</div>
 				</div>
 				<div class="form-horizontal">
 					<div class="form-group">
-						<label for="txtNomeMae" class="col-sm-3 col-md-2 control-label">NOME DA MÃE:</label>
+						<label for="txtNomeMae" class="col-sm-3 col-md-2 control-label">CPF do Responsavel:</label>
 						<div class="col-sm-4">
-							<input type="text" id="txtNomeMae" class="form-control" placeholder="Nome Completo">
+							<input type="search" id="txtNomeMae" class="form-control" placeholder="CPF Responsavel"
+							ng-model="filtro">
+							<select id="responsavel"
+								class="form-control"
+								ng-model="paciente.responsavel"
+								ng-options="paciente._id as paciente.name for paciente in pacientes |filter: filtro">
+
+							</select>
 						</div>	
 						<label for="txtCpf" class="col-sm-1 col-md-2 control-label">CPF:</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" id="txtCpf" placeholder="Número do CPF">
-						</div>
-					</div>
-				</div>
-				<div class="form-horizontal">
-					<div class="form-group">
-						<label for="txtNomePai" class="col-sm-3 col-md-2 control-label">NOME DO PAI:</label>
-						<div class="col-sm-4">
-							<input type="text" class="form-control" id="txtNomePai" placeholder="Nome Completo">
+							<input type="number" class="form-control" id="txtCpf" placeholder="Número do CPF"
+							ng-model="paciente.cpf" required>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-lg-2 col-sm-offset-3 col-md-offset-2">
-						<label for="txtTipoSangue">TIPO SANGUÍNEO</label>
-						<select class="form-control" name="txtTipoSangue" id="txtTipoSangue">
-							<option value="A+">A+</option>
-							<option value="A-">A-</option>
-							<option value="B+">B+</option>
-							<option value="B-">B-</option>
-							<option value="AB+">AB+</option>
-							<option value="AB-">AB-</option>
-							<option value="O+">O+</option>
-							<option value="O-">O-</option>
-						</select>
-					</div>
 					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-sm-offset-3 col-md-offset-0">
 						<label for="txtFone">TELEFONE</label>
 						<input type="text" class="form-control" id="txtFone" placeholder="(00)00000-0000">
 					</div>
 					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-lg-2 col-sm-offset-3 col-md-offset-2">
 						 <label for="txtDataNascimento">DATA DE NASC</label>
-						<input type="date" class="form-control" id="txtDataNascimento" placeholder="00/00/0000">
+						<input type="date" class="form-control" id="txtDataNascimento" placeholder="00/00/0000"
+						ng-model="paciente.dateNascimento" required>
 					</div>
 					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-lg-2">
 						<label for="txtSexo">SEXO</label>
-						<select class="form-control" name="txtSexo" id="txtSexo">
+						<select class="form-control" name="txtSexo" id="txtSexo" 
+						ng-model="paciente.genero">
 							<option value="Masculino">Masculino</option>
 							<option value="Feminino">Feminino</option>
 						</select>
@@ -86,30 +78,36 @@
 					<div class="form-group">
 						<label for="txtLogradouro" class="col-sm-3 col-md-2 control-label">LOGRADOURO:</label>
 						<div class="col-sm-4">
-							<input type="text" id="txtLogradouro" class="form-control" placeholder="Logradouro">
+							<input type="text" id="txtLogradouro" class="form-control" placeholder="Logradouro"
+							ng-model="paciente.logradouro">
 						</div>
 						<label for="txtBairro" class="col-sm-1 col-md-2 control-label">BAIRRO:</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" id="txtBairro" placeholder="Bairro">
+							<input type="text" class="form-control" id="txtBairro" placeholder="Bairro"
+							ng-model="paciente.bairro">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-lg-2 col-sm-offset-3 col-md-offset-2">
 						<label for="txtNumero">NUMERO</label>
-						<input type="text" class="form-control" id="txtNumero" placeholder="Numero">
+						<input type="text" class="form-control" id="txtNumero" placeholder="Numero"
+						ng-model="paciente.numero">
 					</div>
 					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-lg-2">
 						<label for="txtCidade">CIDADE</label>
-						<input type="text" class="form-control" id="txtCidade" placeholder="Cidade">
+						<input type="text" class="form-control" id="txtCidade" placeholder="Cidade"
+						ng-model="paciente.cidade">
 					</div>
 					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-lg-2 col-sm-offset-3 col-md-offset-2">
 						<label for="txtEstado">ESTADO</label>
-						<input type="text" class="form-control" id="txtEstado" placeholder="Estado">
+						<input type="text" class="form-control" id="txtEstado" placeholder="Estado"
+						ng-model="paciente.estado">
 					</div>
 					<div class="form-group col-xs-6 col-sm-3 col-md-2 col-lg-2 col-sm-offset-3 col-md-offset-0">
 						<label for="txtCep">CEP</label>
-						<input type="text" class="form-control" id="txtCep" placeholder="CEP">
+						<input type="text" class="form-control" id="txtCep" placeholder="CEP"
+						ng-model="paciente.cep">
 					</div>
 				</div>
 			</header>
