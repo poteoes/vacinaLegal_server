@@ -1,7 +1,11 @@
 angular.module('vacinalegal').controller("atualizarEnderecoCtrl", 
     function(Paciente, $scope, $resource, $routeParams, $location){
         $scope.pacientes = [];
-        
+
+        Paciente = $resource("/paciente/:id")
+        // if(Paciente == null){
+        //     Paciente = new Paciente();
+        // }
         if ($routeParams.pacienteId) {
             Paciente.get({id: $routeParams.pacienteId},
                 function(paciente) {
